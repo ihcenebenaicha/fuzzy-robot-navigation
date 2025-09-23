@@ -17,4 +17,3 @@ The code includes simulations with ROS and MATLAB and is structured for easy ada
 - Simulation-ready for ROS and MATLAB
 
 ## Getting Started
-1. Clone the repository:
