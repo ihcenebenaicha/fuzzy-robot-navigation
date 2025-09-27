@@ -95,7 +95,8 @@ while global_goal_reached == 0
         no_vide_r = no_vide_ros1(scanData,"r");
         
         [goalIsolated, not_on_my_ranges] = goal_isolated_ros1(n, thetaGoal, distToGoal,  scanData);
-% index_nearest_obs < n/q'2+55, index_nearest_obs > n/2-55,
+
+%% sub goal generator
 %         if all([no_vide_r, not(no_vide_l), goalIsolated,  l==0])
 %             edge_index = left_close.edge;
 %             edge_x = robot.x + scanData.Ranges(edge_index)*cos(angles_scan(edge_index)+yaw);
@@ -110,28 +111,6 @@ while global_goal_reached == 0
 %             new_sub_goal = [edge_x - 0.3, edge_y - 0.3]
 %             goals = [goals(1:end-1,:); new_sub_goal; goals(end,:)]
 %             l = 1;
-%         elseif no_vide_l && no_vide_r
-%             no_vide_l && no_vide_r
-%             while not_on_my_ranges
-%                 distToGoal = norm(goals(goal_index,:)-[position.X position.Y]);                                         
-%                 thetad = atan2(goals(goal_index,2)-position.Y, goals(goal_index,1)-position.X);
-%                 thetaGoal= -thetad + yaw;             
-%                 if thetaGoal < -3.14
-%                     thetaGoal = thetaGoal + 6.28;
-%                 elseif thetaGoal > 3.14
-%                     thetaGoal = thetaGoal - 6.28;
-%                 end
-%                 scanData = receive(laserSub, 10);
-%                 [goalIsolated, not_on_my_ranges] = goal_isolated_ros1(n, thetaGoal, distToGoal,  scanData);
-%                 velMsg.Angular.Z = -0.1;
-%                 velMsg.Linear.X = 0.0;
-%                 send(velPub, velMsg);
-%             end
-%             if not(goalIsolated)
-%                 velMsg.Angular.Z = 0.0;
-%                 send(velPub, velMsg);
-%                 continue;
-%             end
 %         end
 
                                 
