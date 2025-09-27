@@ -16,4 +16,20 @@ The code includes simulations with ROS and MATLAB and is structured for easy ada
 - Sub-goal generation for complex paths
 - Simulation-ready for ROS and MATLAB
 
-## Getting Started
+## Installation
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/ihcenebenaicha/fuzzy-robot-navigation.git
+   
+## Requirements
+- **ROS1 (Noetic or Melodic recommended)**
+- **Gazebo Simulator** (for virtual environment testing)
+- **MATLAB** 
+- OR a **real robot** with:
+  - Laser sensor (LIDAR)
+  - ROS1 interface
+
+## Execution
+To run the program, launch the main file named laser_FLC_IB_ros1.py. If the environment requires sub-goal generation, uncomment the section marked # sub goal generator in the main file
+
+For further explanation, consult the article: An Improved Fuzzy Logic Controller for Mobile Robots Navigation in Unknown Environments. https://doi.org/10.1002/rob.70037
